@@ -14,6 +14,7 @@ import okhttp3.internal.http.HttpMethod;
 
 /**
  * Created by zhy on 16/2/23.
+ * 已添加
  */
 public class OtherRequest extends OkHttpRequest
 {

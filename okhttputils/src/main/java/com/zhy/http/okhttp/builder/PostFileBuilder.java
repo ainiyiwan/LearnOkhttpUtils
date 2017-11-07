@@ -9,6 +9,7 @@ import okhttp3.MediaType;
 
 /**
  * Created by zhy on 15/12/14.
+ * 已添加
  */
 public class PostFileBuilder extends OkHttpRequestBuilder<PostFileBuilder>
 {

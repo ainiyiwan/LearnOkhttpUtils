@@ -39,6 +39,7 @@ import okhttp3.HttpUrl;
  * are serialized and stored in SharedPreferences. Instances of this class are
  * designed to be used with AsyncHttpClient#setCookieStore, but can also be used with a
  * regular old apache HttpClient/HttpContext if you prefer.
+ * 已添加
  */
 public class PersistentCookieStore implements CookieStore
 {

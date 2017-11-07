@@ -7,6 +7,7 @@ import okhttp3.Response;
 
 /**
  * Created by JimGong on 2016/6/23.
+ * Generics : 一般的，普通的；通用的
  */
 
 public abstract class GenericsCallback<T> extends Callback<T> {

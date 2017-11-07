@@ -12,6 +12,7 @@ import java.util.Set;
 
 /**
  * Created by zhy on 15/12/14.
+ * 已添加
  */
 public class GetBuilder extends OkHttpRequestBuilder<GetBuilder> implements HasParamsable
 {

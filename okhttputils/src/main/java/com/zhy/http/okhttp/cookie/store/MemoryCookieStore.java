@@ -11,6 +11,7 @@ import okhttp3.HttpUrl;
 
 /**
  * Created by zhy on 16/3/10.
+ * 已添加
  */
 public class MemoryCookieStore implements CookieStore
 {

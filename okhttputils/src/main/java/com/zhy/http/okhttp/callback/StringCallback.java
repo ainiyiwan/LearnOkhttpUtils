@@ -6,6 +6,7 @@ import okhttp3.Response;
 
 /**
  * Created by zhy on 15/12/14.
+ * 已添加
  */
 public abstract class StringCallback extends Callback<String>
 {

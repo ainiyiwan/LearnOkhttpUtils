@@ -11,6 +11,7 @@ import okhttp3.Response;
 
 /**
  * Created by zhy on 15/12/15.
+ * 已添加
  */
 public abstract class FileCallBack extends Callback<File>
 {
@@ -52,24 +53,19 @@ public abstract class FileCallBack extends Callback<File>
             long sum = 0;
 
             File dir = new File(destFileDir);
-            if (!dir.exists())
-            {
+            if (!dir.exists()){
                 dir.mkdirs();
             }
             File file = new File(dir, destFileName);
             fos = new FileOutputStream(file);
-            while ((len = is.read(buf)) != -1)
-            {
+            while ((len = is.read(buf)) != -1){
                 sum += len;
-                fos.write(buf, 0, len);
+                fos.write(buf,0,len);
                 final long finalSum = sum;
-                OkHttpUtils.getInstance().getDelivery().execute(new Runnable()
-                {
+                OkHttpUtils.getInstance().getDelivery().execute(new Runnable() {
                     @Override
-                    public void run()
-                    {
-
-                        inProgress(finalSum * 1.0f / total,total,id);
+                    public void run() {
+                        inProgress(finalSum * 1.0f / total, total, id);
                     }
                 });
             }

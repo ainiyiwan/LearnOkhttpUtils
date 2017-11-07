@@ -11,6 +11,7 @@ import okhttp3.RequestBody;
 
 /**
  * Created by zhy on 15/11/6.
+ * 已添加
  */
 public abstract class OkHttpRequest
 {

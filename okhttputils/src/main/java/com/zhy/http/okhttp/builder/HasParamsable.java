@@ -4,6 +4,7 @@ import java.util.Map;
 
 /**
  * Created by zhy on 16/3/1.
+ * 已添加
  */
 public interface HasParamsable
 {

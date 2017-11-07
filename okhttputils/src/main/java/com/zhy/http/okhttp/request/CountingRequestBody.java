@@ -1,10 +1,9 @@
 package com.zhy.http.okhttp.request;
 
-import okhttp3.MediaType;
-import okhttp3.RequestBody;
-
 import java.io.IOException;
 
+import okhttp3.MediaType;
+import okhttp3.RequestBody;
 import okio.Buffer;
 import okio.BufferedSink;
 import okio.ForwardingSink;
@@ -15,7 +14,7 @@ import okio.Sink;
  * Decorates an OkHttp request body to count the number of bytes written when writing it. Can
  * decorate any request body, but is most useful for tracking the upload progress of large
  * multipart requests.
- *
+ * 已添加
  * @author Leo Nikkilä
  */
 public class CountingRequestBody extends RequestBody

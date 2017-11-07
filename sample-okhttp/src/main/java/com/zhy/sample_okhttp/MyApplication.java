@@ -2,6 +2,8 @@ package com.zhy.sample_okhttp;
 
 import android.app.Application;
 
+import com.facebook.stetho.Stetho;
+import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.franmontiel.persistentcookiejar.ClearableCookieJar;
 import com.franmontiel.persistentcookiejar.PersistentCookieJar;
 import com.franmontiel.persistentcookiejar.cache.SetCookieCache;
@@ -43,6 +45,7 @@ public class MyApplication extends Application
     {
         super.onCreate();
 
+        Stetho.initializeWithDefaults(this);
         ClearableCookieJar cookieJar1 = new PersistentCookieJar(new SetCookieCache(), new SharedPrefsCookiePersistor(getApplicationContext()));
 
         HttpsUtils.SSLParams sslParams = HttpsUtils.getSslSocketFactory(null, null, null);
@@ -51,6 +54,7 @@ public class MyApplication extends Application
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .connectTimeout(10000L, TimeUnit.MILLISECONDS)
                 .readTimeout(10000L, TimeUnit.MILLISECONDS)
+                .addNetworkInterceptor(new StethoInterceptor())
                 .addInterceptor(new LoggerInterceptor("TAG"))
                 .cookieJar(cookieJar1)
                 .hostnameVerifier(new HostnameVerifier()
